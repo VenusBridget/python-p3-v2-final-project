@@ -4,9 +4,6 @@ from models.song import Song
 from models.artist import Artist
 from models.collab import Collab
 
-# def helper_1():
-#     print("Performing useful function#1.")
-
 
 def exit_program():
     print("Goodbye!")
