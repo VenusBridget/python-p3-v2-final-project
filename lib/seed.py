@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-# lib/debug.py
 
 from models.__init__ import CONN, CURSOR
 from models.playlist import Playlist
 from models.song import Song
 from models.artist import Artist
 from models.collab import Collab
-import ipdb
 
-def reset_database():
+def seed_database():
     Song.drop_table()
     Playlist.drop_table()
     Artist.drop_table()
@@ -53,5 +51,6 @@ def reset_database():
     Collab.create("One Sweet Day", boys_ii_men.name, rnb_old_skul.id)
 
 
-reset_database()
-ipdb.set_trace()
+
+seed_database()
+print("Seeded database")
